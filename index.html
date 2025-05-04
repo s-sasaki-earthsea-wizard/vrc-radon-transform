@@ -129,11 +129,49 @@ $$
 
 ---
 
+### CTスキャナーの基本原理
+
+<div class="simple-box">
+
+* 多方向からX線を照射し、透過強度を測定
+* 各方向の透過データから物体内部の構造を再構成
+* 問題：**透過データから物体の内部構造をどう求める？**
+
+</div>
+
+<img src="assets/images/ph01.jpg" height="350px">
+
+---
+
 ### ラドン変換とは？
 
 <div class="simple-box">
 
+* 数学者ラドン (Johann Radon) が1917年に発表
+* 平たく言うと、**平面の関数を直線の関数に変換する**数学的手法
+* 平面の画像を3次元にするための道筋を作った！
 
+</div>
+
+<img src="assets/images/Johann_Radon_caption.png" height="330px">
+
+---
+
+### ラドン変換の数式表現
+
+<div class="two-columns">
+
+<div class="column-left">
+
+* 物体内のX線吸収係数の分布を$f(x,y)$と表す
+* 直線$\ell(t,\theta)$に沿ったX線の積分値：
+
+$$Rf(t,\theta) = \int_{-\infty}^{\infty} f(t\cos\theta - s\sin\theta, t\sin\theta + s\cos\theta)ds$$
+
+* この積分変換がラドン変換
+* 実際の測定データは$Rf(t,\theta)$に対応
+
+</div>
 
 ---
 
